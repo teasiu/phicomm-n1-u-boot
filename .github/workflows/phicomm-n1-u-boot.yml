@@ -52,7 +52,7 @@ jobs:
 
       - name: Apply patch
         run: |
-          wget -O $GITHUB_WORKSPACE/phicomm-n1-u-boot.patch https://github.com/PuXiongfei/phicomm-n1-armbian/raw/main/override/userpatches/u-boot/u-boot-meson64/meson-gxl-s905d-phicomm-n1-u-boot-${{ github.event.inputs.tags }}.patch
+          wget -O $GITHUB_WORKSPACE/phicomm-n1-u-boot.patch https://github.com/PuXiongfei/phicomm-n1-armbian/raw/main/override/userpatches/u-boot/v2022.10/board_phicomm-n1/meson-gxl-s905d-phicomm-n1-u-boot-${{ github.event.inputs.tags }}.patch
           cat $GITHUB_WORKSPACE/phicomm-n1-u-boot.patch
           cd u-boot
           git apply $GITHUB_WORKSPACE/phicomm-n1-u-boot.patch
